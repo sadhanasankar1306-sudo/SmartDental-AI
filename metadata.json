@@ -1,0 +1,6 @@
+{
+  "name": "SmartDental AI",
+  "description": "AI-Powered Dental Screening and Tooth-Level Analysis System with Modality-Specific Quality-Aware Pipelines",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <filter id="xrayGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="alveolarBone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a40" />
+      <stop offset="50%" stop-color="#4e4e58" />
+      <stop offset="100%" stop-color="#2c2c34" />
+    </linearGradient>
+    <linearGradient id="enamelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eaeaf0" />
+      <stop offset="100%" stop-color="#c4c4cc" />
+    </linearGradient>
+    <linearGradient id="dentinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8c8c98" />
+      <stop offset="100%" stop-color="#6a6a75" />
+    </linearGradient>
+    <filter id="cariesShadow">
+      <feGaussianBlur stdDeviation="2.5" />
+    </filter>
+  </defs>
+
+  <!-- Radiographic Dark Base (Air / Soft Tissue) -->
+  <rect width="1200" height="900" fill="#141418" />
+
+  <!-- Trabecular bone pattern / alveolar crest -->
+  <rect x="0" y="440" width="1200" height="90" fill="url(#alveolarBone)" opacity="0.6" />
+  <rect x="0" y="0" width="1200" height="240" fill="url(#alveolarBone)" opacity="0.6" />
+
+  <!-- Upper Molars & Premolars -->
+  <!-- Tooth 17 (Second Molar) -->
+  <g transform="translate(140, 160)">
+    <!-- Roots into maxilla -->
+    <path d="M 40,0 Q 30,120 50,180 L 140,180 Q 160,120 150,0 Z" fill="url(#dentinGrad)" />
+    <!-- Pulp canals -->
+    <path d="M 60,30 Q 55,100 70,160 Q 95,170 120,160 Q 135,100 130,30 Z" fill="#202028" />
+    <!-- Crown Dentin -->
+    <path d="M 40,180 Q 30,220 35,270 L 155,270 Q 160,220 150,180 Z" fill="url(#dentinGrad)" />
+    <!-- Radiopaque Enamel Cap -->
+    <path d="M 35,220 Q 25,270 30,295 Q 95,310 160,295 Q 165,270 155,220 L 145,220 Q 155,260 150,285 Q 95,295 40,285 Q 35,260 45,220 Z" fill="url(#enamelGrad)" />
+  </g>
+
+  <!-- Tooth 16 (First Molar with suspected interproximal caries on mesial surface) -->
+  <g transform="translate(370, 170)">
+    <!-- Roots -->
+    <path d="M 50,0 Q 40,120 60,180 L 150,180 Q 170,120 160,0 Z" fill="url(#dentinGrad)" />
+    <!-- Pulp chamber -->
+    <path d="M 70,30 Q 65,110 80,160 Q 105,170 130,160 Q 145,110 140,30 Z" fill="#202028" />
+    <!-- Crown -->
+    <path d="M 50,180 Q 40,220 45,270 L 165,270 Q 170,220 160,180 Z" fill="url(#dentinGrad)" />
+    <!-- Enamel Shell -->
+    <path d="M 45,220 Q 35,270 40,295 Q 105,310 170,295 Q 175,270 165,220 L 155,220 Q 165,260 160,285 Q 105,295 50,285 Q 45,260 55,220 Z" fill="url(#enamelGrad)" />
+    <!-- Radiolucent Caries Lesion (Mesial proximal enamel shadow) -->
+    <path d="M 160,250 Q 172,260 170,275 Q 150,270 152,255 Z" fill="#181820" filter="url(#cariesShadow)" />
+  </g>
+
+  <!-- Tooth 15 (Second Premolar) -->
+  <g transform="translate(590, 190)">
+    <path d="M 45,0 Q 40,110 50,160 L 120,160 Q 130,110 125,0 Z" fill="url(#dentinGrad)" />
+    <path d="M 60,20 Q 55,90 70,140 Q 95,150 105,140 Q 115,90 110,20 Z" fill="#202028" />
+    <path d="M 45,160 Q 40,195 45,250 L 125,250 Q 130,195 125,160 Z" fill="url(#dentinGrad)" />
+    <path d="M 40,200 Q 35,245 40,270 Q 85,285 130,270 Q 135,245 130,200 L 120,200 Q 125,240 120,260 Q 85,272 50,260 Q 45,240 50,200 Z" fill="url(#enamelGrad)" />
+  </g>
+
+  <!-- Lower Dentition -->
+  <!-- Tooth 47 (Lower Second Molar) -->
+  <g transform="translate(150, 480)">
+    <!-- Enamel Cap -->
+    <path d="M 30,70 Q 25,35 35,10 Q 95,0 155,10 Q 165,35 160,70 L 150,70 Q 155,40 145,20 Q 95,10 45,20 Q 35,40 40,70 Z" fill="url(#enamelGrad)" />
+    <path d="M 35,30 Q 30,80 40,120 L 150,120 Q 160,80 155,30 Z" fill="url(#dentinGrad)" />
+    <!-- Roots -->
+    <path d="M 40,120 Q 30,220 50,300 L 140,300 Q 160,220 150,120 Z" fill="url(#dentinGrad)" />
+    <path d="M 60,140 Q 55,220 70,280 Q 95,290 120,280 Q 135,220 130,140 Z" fill="#202028" />
+  </g>
+
+  <!-- Tooth 46 (Lower First Molar with dense radiopaque metallic restoration) -->
+  <g transform="translate(380, 480)">
+    <!-- Radiopaque Amalgam Restoration -->
+    <rect x="55" y="10" width="90" height="40" rx="6" fill="#ffffff" filter="url(#xrayGlow)" />
+    <path d="M 35,30 Q 30,80 40,120 L 150,120 Q 160,80 155,30 Z" fill="url(#dentinGrad)" />
+    <!-- Roots into mandible -->
+    <path d="M 40,120 Q 30,220 50,300 L 140,300 Q 160,220 150,120 Z" fill="url(#dentinGrad)" />
+    <path d="M 60,140 Q 55,220 70,280 Q 95,290 120,280 Q 135,220 130,140 Z" fill="#202028" />
+  </g>
+
+  <!-- Tooth 45 (Lower Second Premolar) -->
+  <g transform="translate(600, 480)">
+    <path d="M 40,60 Q 35,30 45,10 Q 85,0 125,10 Q 135,30 130,60 L 120,60 Q 125,35 115,20 Q 85,10 55,20 Q 45,35 50,60 Z" fill="url(#enamelGrad)" />
+    <path d="M 40,25 Q 35,70 45,110 L 125,110 Q 135,70 130,25 Z" fill="url(#dentinGrad)" />
+    <path d="M 45,110 Q 40,210 50,290 L 120,290 Q 130,210 125,110 Z" fill="url(#dentinGrad)" />
+  </g>
+
+  <!-- Radiographic Artifact & Scale bar -->
+  <text x="50" y="860" font-family="monospace" font-size="14" fill="#666677">SMARTDENTAL BITEWING RAD-20261026-X88 • 70kVp 8mA</text>
+  <line x1="1000" y1="850" x2="1140" y2="850" stroke="#888899" stroke-width="2" />
+  <text x="1040" y="840" font-family="monospace" font-size="12" fill="#888899">10 mm</text>
+</svg>

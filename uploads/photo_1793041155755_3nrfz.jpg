@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <radialGradient id="oralBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3d0a14" />
+      <stop offset="70%" stop-color="#21050a" />
+      <stop offset="100%" stop-color="#100204" />
+    </radialGradient>
+    <linearGradient id="gumUpper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bf4357" />
+      <stop offset="60%" stop-color="#cf5369" />
+      <stop offset="100%" stop-color="#df6b81" />
+    </linearGradient>
+    <linearGradient id="gumLower" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#df6b81" />
+      <stop offset="40%" stop-color="#cf5369" />
+      <stop offset="100%" stop-color="#b03a4c" />
+    </linearGradient>
+    <linearGradient id="enamel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdfdfa" />
+      <stop offset="60%" stop-color="#f5f4ea" />
+      <stop offset="100%" stop-color="#e2e0cb" />
+    </linearGradient>
+    <linearGradient id="enamelLower" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#faf9f2" />
+      <stop offset="70%" stop-color="#f0efe0" />
+      <stop offset="100%" stop-color="#ddd9c2" />
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" />
+    </filter>
+  </defs>
+
+  <!-- Dark oral cavity backdrop -->
+  <rect width="1200" height="900" fill="url(#oralBg)" />
+
+  <!-- Upper Gingiva / Gums with scalloped papilla -->
+  <path d="M 150,150 Q 300,180 400,260 Q 500,240 600,240 Q 700,240 800,260 Q 900,180 1050,150 L 1050,80 L 150,80 Z" fill="url(#gumUpper)" />
+  <path d="M 280,240 C 330,220 380,230 420,290 C 470,260 520,265 600,265 C 680,265 730,260 780,290 C 820,230 870,220 920,240 C 970,260 1010,290 1040,330 C 1040,160 850,140 600,140 C 350,140 160,160 160,330 C 190,290 230,260 280,240 Z" fill="url(#gumUpper)" filter="url(#soft)" />
+
+  <!-- Upper Teeth -->
+  <!-- 13: Canine -->
+  <path d="M 320,290 Q 355,275 385,320 L 380,450 Q 350,470 330,440 Z" fill="url(#enamel)" stroke="#d5d0b5" stroke-width="2" />
+  <!-- 12: Lateral Incisor -->
+  <path d="M 385,305 Q 435,285 475,310 L 475,465 Q 430,480 395,465 Z" fill="url(#enamel)" stroke="#d5d0b5" stroke-width="2" />
+  <!-- 11: Upper Right Central Incisor -->
+  <path d="M 480,295 Q 535,275 595,285 L 595,490 Q 535,500 480,485 Z" fill="url(#enamel)" stroke="#d5d0b5" stroke-width="2" />
+  <!-- Mild extrinsic stain on 11 -->
+  <ellipse cx="530" cy="400" rx="25" ry="35" fill="#c49a62" opacity="0.25" filter="url(#soft)" />
+
+  <!-- 21: Upper Left Central Incisor -->
+  <path d="M 605,285 Q 665,275 720,295 L 720,485 Q 665,500 605,490 Z" fill="url(#enamel)" stroke="#d5d0b5" stroke-width="2" />
+  <!-- 22: Lateral Incisor -->
+  <path d="M 725,310 Q 765,285 815,305 L 805,465 Q 770,480 725,465 Z" fill="url(#enamel)" stroke="#d5d0b5" stroke-width="2" />
+  <!-- 23: Canine -->
+  <path d="M 815,320 Q 845,275 880,290 L 870,440 Q 850,470 820,450 Z" fill="url(#enamel)" stroke="#d5d0b5" stroke-width="2" />
+
+  <!-- Interdental contact lines -->
+  <line x1="600" y1="285" x2="600" y2="490" stroke="#b8b090" stroke-width="2.5" />
+  <line x1="480" y1="295" x2="480" y2="480" stroke="#b8b090" stroke-width="2" />
+  <line x1="720" y1="295" x2="720" y2="480" stroke="#b8b090" stroke-width="2" />
+
+  <!-- Lower Gums -->
+  <path d="M 180,680 Q 320,640 450,600 Q 530,590 600,590 Q 670,590 750,600 Q 880,640 1020,680 L 1020,820 L 180,820 Z" fill="url(#gumLower)" />
+
+  <!-- Lower Teeth -->
+  <!-- 42 -->
+  <path d="M 430,620 Q 470,640 485,590 L 485,520 Q 460,510 435,525 Z" fill="url(#enamelLower)" stroke="#cfc8aa" stroke-width="2" />
+  <!-- 41: Lower Right Central Incisor -->
+  <path d="M 490,610 Q 535,625 545,595 L 545,510 Q 520,505 490,515 Z" fill="url(#enamelLower)" stroke="#cfc8aa" stroke-width="2" />
+  <!-- Visible calculus deposit on cervical margin of 41 -->
+  <path d="M 495,590 Q 520,605 540,588 Q 535,578 505,580 Z" fill="#d2af64" opacity="0.9" />
+
+  <!-- 31: Lower Left Central Incisor -->
+  <path d="M 555,595 Q 565,625 610,610 L 610,515 Q 580,505 555,510 Z" fill="url(#enamelLower)" stroke="#cfc8aa" stroke-width="2" />
+  <!-- Erythema on papilla between 41 & 31 -->
+  <circle cx="550" cy="600" r="14" fill="#c42843" opacity="0.6" filter="url(#soft)" />
+
+  <!-- 32 -->
+  <path d="M 615,590 Q 630,640 670,620 L 665,525 Q 640,510 615,520 Z" fill="url(#enamelLower)" stroke="#cfc8aa" stroke-width="2" />
+
+  <!-- Lip boundaries / Retractor frame -->
+  <path d="M 100,250 C 150,100 400,60 600,60 C 800,60 1050,100 1100,250 C 1140,400 1140,550 1100,700 C 1050,840 800,880 600,880 C 400,880 150,840 100,700 C 60,550 60,400 100,250 Z" fill="none" stroke="#220508" stroke-width="40" />
+</svg>
